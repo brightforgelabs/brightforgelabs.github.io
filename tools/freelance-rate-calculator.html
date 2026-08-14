@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freelance Rate Calculator — free tool</title>
+<style>
+  :root {
+    --navy: #1f3b57;
+    --accent: #2e75b6;
+    --light: #dce6f1;
+    --bg: #f4f7fa;
+    --text: #21303f;
+    --muted: #5c6b7a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding: 24px 16px 48px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 28px; }
+  header h1 { color: var(--navy); font-size: 1.9rem; margin-bottom: 6px; }
+  header p { color: var(--muted); max-width: 540px; margin: 0 auto; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 2px 10px rgba(31, 59, 87, 0.08);
+  }
+  .card h2 {
+    color: var(--navy);
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--light);
+  }
+  label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 12px 0 4px;
+  }
+  label:first-of-type { margin-top: 0; }
+  .hint { font-weight: 400; color: var(--muted); }
+  input[type="number"] {
+    width: 100%;
+    padding: 9px 10px;
+    font-size: 1rem;
+    border: 1px solid #b7c3d0;
+    border-radius: 8px;
+    color: var(--text);
+  }
+  input[type="number"]:focus {
+    outline: 2px solid var(--accent);
+    border-color: var(--accent);
+  }
+  .results .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background: var(--light);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+  }
+  .results .row.big { background: var(--navy); }
+  .results .row.big .label, .results .row.big .value { color: #fff; }
+  .results .label { font-size: 0.9rem; color: var(--navy); font-weight: 600; }
+  .results .value { font-size: 1.25rem; font-weight: 700; color: var(--navy); }
+  .results .row.big .value { font-size: 1.6rem; }
+  .breakdown { font-size: 0.85rem; color: var(--muted); margin-top: 14px; }
+  .breakdown li { margin-left: 18px; margin-top: 4px; }
+  footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  footer .disclaimer { max-width: 600px; margin: 0 auto 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Freelance Rate Calculator</h1>
+    <p>Work backwards from the income you want to the hourly, day, and weekly
+    rates that get you there — accounting for time off, business costs, and a
+    tax set-aside.</p>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Your numbers</h2>
+
+      <label for="income">Income goal <span class="hint">($ / year, what you want to keep before taxes are set aside)</span></label>
+      <input type="number" id="income" value="70000" min="0" step="1000">
+
+      <label for="costs">Business costs <span class="hint">($ / year — software, gear, insurance, fees)</span></label>
+      <input type="number" id="costs" value="4000" min="0" step="100">
+
+      <label for="tax">Tax set-aside <span class="hint">(% of gross to reserve — ask your tax professional what's right for you)</span></label>
+      <input type="number" id="tax" value="30" min="0" max="60" step="1">
+
+      <label for="hours">Billable hours per week <span class="hint">(most freelancers bill far fewer than 40)</span></label>
+      <input type="number" id="hours" value="25" min="1" max="80" step="1">
+
+      <label for="weeks">Working weeks per year <span class="hint">(52 minus vacation, sick days, dry spells)</span></label>
+      <input type="number" id="weeks" value="46" min="1" max="52" step="1">
+
+      <label for="dayhours">Billable hours in a full day <span class="hint">(used for your day rate)</span></label>
+      <input type="number" id="dayhours" value="6" min="1" max="12" step="0.5">
+    </div>
+
+    <div class="card results">
+      <h2>What you'd need to charge</h2>
+      <div class="row big">
+        <span class="label">Hourly rate</span>
+        <span class="value" id="r-hour">–</span>
+      </div>
+      <div class="row">
+        <span class="label">Day rate</span>
+        <span class="value" id="r-day">–</span>
+      </div>
+      <div class="row">
+        <span class="label">Weekly billings</span>
+        <span class="value" id="r-week">–</span>
+      </div>
+      <div class="row">
+        <span class="label">Gross revenue needed / year</span>
+        <span class="value" id="r-gross">–</span>
+      </div>
+      <ul class="breakdown" id="breakdown"></ul>
+    </div>
+  </div>
+
+  <footer>
+    <p class="disclaimer">This calculator is a math tool: it turns the numbers
+    you enter into rates. It is not financial or tax advice — tax rules and the
+    right set-aside depend on where you live and how you're set up.</p>
+    <p>All calculations run in your browser; nothing you type is sent anywhere.
+    Save this file and it works offline.</p>
+  </footer>
+</div>
+
+<script>
+  var fmt = new Intl.NumberFormat("en-US",
+    { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+
+  function num(id) { return parseFloat(document.getElementById(id).value) || 0; }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function calc() {
+    var income = num("income");
+    var costs = num("costs");
+    var taxPct = Math.min(num("tax"), 99) / 100;
+    var hours = num("hours");
+    var weeks = num("weeks");
+    var dayHours = num("dayhours");
+
+    var billable = hours * weeks;
+    if (billable <= 0 || taxPct >= 1) {
+      ["r-hour", "r-day", "r-week", "r-gross"].forEach(function (id) { set(id, "–"); });
+      document.getElementById("breakdown").innerHTML = "";
+      return;
+    }
+
+    var gross = (income + costs) / (1 - taxPct);
+    var hourly = gross / billable;
+
+    set("r-hour", fmt.format(Math.ceil(hourly)));
+    set("r-day", fmt.format(Math.ceil(hourly * dayHours)));
+    set("r-week", fmt.format(Math.ceil(hourly * hours)));
+    set("r-gross", fmt.format(Math.round(gross)));
+
+    document.getElementById("breakdown").innerHTML =
+      "<li>" + billable.toLocaleString("en-US") + " billable hours per year (" +
+      hours + " h × " + weeks + " weeks)</li>" +
+      "<li>" + fmt.format(Math.round(gross * taxPct)) + " reserved for taxes at " +
+      Math.round(taxPct * 100) + "%</li>" +
+      "<li>" + fmt.format(costs) + " covers business costs</li>" +
+      "<li>leaving your " + fmt.format(income) + " income goal</li>";
+  }
+
+  document.querySelectorAll("input").forEach(function (el) {
+    el.addEventListener("input", calc);
+  });
+  calc();
+</script>
+</body>
+</html>
