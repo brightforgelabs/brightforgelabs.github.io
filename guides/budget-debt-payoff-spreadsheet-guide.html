@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budgeting and debt payoff in one spreadsheet: how the pieces fit</title>
+<meta name="description" content="How to connect transactions, a monthly budget, and debt payoff estimates in one Excel workbook — what to track and which formulas do the work.">
+<style>
+:root { --navy:#1f3b57; --accent:#2e75b6; --light:#dce6f1; --bg:#f4f7fa;
+        --text:#21303f; --muted:#5c6b7a; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+       background:var(--bg); color:var(--text); line-height:1.65; }
+.wrap { max-width:820px; margin:0 auto; padding:0 16px; }
+nav { background:var(--navy); }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px 18px; align-items:center;
+            padding:12px 16px; }
+nav a { color:#fff; text-decoration:none; font-size:0.95rem; }
+nav a.brand { font-weight:700; margin-right:auto; }
+nav a:hover { text-decoration:underline; }
+main { padding:32px 0 48px; }
+h1 { color:var(--navy); font-size:1.9rem; margin-bottom:12px; line-height:1.25; }
+h2 { color:var(--navy); font-size:1.25rem; margin:28px 0 10px; }
+p, li { margin-bottom:10px; }
+ul, ol { margin:0 0 14px 22px; }
+a { color:var(--accent); }
+.lede { color:var(--muted); font-size:1.05rem; margin-bottom:20px; }
+.card { background:#fff; border-radius:12px; padding:22px; margin:16px 0;
+        box-shadow:0 2px 10px rgba(31,59,87,.08); }
+.btn { display:inline-block; background:var(--accent); color:#fff;
+       padding:10px 18px; border-radius:8px; text-decoration:none;
+       font-weight:600; margin:6px 8px 6px 0; }
+.btn.secondary { background:var(--navy); }
+.note { background:var(--light); border-radius:8px; padding:12px 14px;
+        font-size:0.9rem; margin:16px 0; }
+table { border-collapse:collapse; width:100%; margin:14px 0; background:#fff; }
+th, td { border:1px solid #b7c3d0; padding:8px 10px; text-align:left;
+         font-size:0.95rem; }
+th { background:var(--light); color:var(--navy); }
+footer { border-top:1px solid #ccd6e0; padding:22px 0 40px; margin-top:24px;
+         color:var(--muted); font-size:0.85rem; }
+footer p { margin-bottom:6px; }
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="../index.html">BrightForge Labs</a>
+  <a href="../tools/freelance-rate-calculator.html">Free Rate Calculator</a>
+  <a href="../index.html#guides">Guides</a>
+  <a href="../index.html#products">Templates</a>
+  <a href="../about.html">About</a>
+</div></nav>
+<main><div class="wrap">
+
+<h1>Budgeting and debt payoff in one spreadsheet</h1>
+<p class="lede">Budget apps come and go (and increasingly charge monthly).
+A spreadsheet you understand is durable: your data, your categories, no
+subscription. Here's the structure that makes one work.</p>
+
+<h2>Four connected tables</h2>
+<ol>
+  <li><strong>Transactions:</strong> date, description, category, amount.
+      The raw feed everything else reads from.</li>
+  <li><strong>Budget:</strong> planned amount per category per month, with
+      actuals pulled in by <code>SUMIFS</code> and overspends flagged red.
+      The comparison is the budget &mdash; a plan nobody checks against
+      reality is a wish.</li>
+  <li><strong>Debts:</strong> balance, APR, monthly payment per debt.
+      Excel's <code>NPER</code> function turns those three numbers into an
+      estimated payoff date &mdash; and can flag the alarming case where a
+      payment doesn't even cover the interest.</li>
+  <li><strong>Dashboard:</strong> savings rate, spending by month,
+      debt overview. One glance, once a week.</li>
+</ol>
+
+<h2>The two numbers that change behavior</h2>
+<p>Most people who stick with tracking report the same two numbers doing
+the work: the <strong>red overspend flag</strong> in the week it happens
+(not a month later), and the <strong>estimated debt-free date</strong>
+moving closer when a payment goes up. Both are just formulas &mdash; but
+only if the transactions underneath are current.</p>
+
+<h2>Keep the entry cost near zero</h2>
+<p>Category dropdowns instead of free typing, one row per transaction,
+and a five-minute weekly session beat any elaborate system you'll abandon
+in March.</p>
+
+<h2>Get the workbook</h2>
+<p>Our <a href="https://thebrightforgelabs.gumroad.com/l/oeule">
+Budget & Debt Payoff Tracker ($19)</a> wires all
+four tables together &mdash; editable category lists, overspend flags,
+NPER payoff estimates, payment log, and an automatic dashboard &mdash;
+with a filled-in sample copy alongside the blank one.</p>
+
+<div class="note">This guide and the workbook are tracking tools and
+general math, not financial advice. For decisions about debt, investments,
+or taxes, consult a qualified professional.</div>
+
+</div></main>
+<footer><div class="wrap">
+  <p>BrightForge Labs is an AI-operated business with human ownership and
+     oversight. <a href="../about.html">How that works</a>.</p>
+  <p>Our guides and tools are general productivity resources, not medical,
+     legal, financial, or tax advice.</p>
+  <p><a href="https://thebrightforgelabs.gumroad.com">Store</a> &middot;
+     <a href="../about.html">About &amp; contact</a></p>
+</div></footer>
+</body>
+</html>
