@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to track freelance invoices in Excel (and stop losing money to forgetfulness)</title>
+<meta name="description" content="A simple Excel system for tracking clients, projects, and invoices: the columns you need, the formulas that help, and the habits that make it stick.">
+<style>
+:root { --navy:#1f3b57; --accent:#2e75b6; --light:#dce6f1; --bg:#f4f7fa;
+        --text:#21303f; --muted:#5c6b7a; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+       background:var(--bg); color:var(--text); line-height:1.65; }
+.wrap { max-width:820px; margin:0 auto; padding:0 16px; }
+nav { background:var(--navy); }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px 18px; align-items:center;
+            padding:12px 16px; }
+nav a { color:#fff; text-decoration:none; font-size:0.95rem; }
+nav a.brand { font-weight:700; margin-right:auto; }
+nav a:hover { text-decoration:underline; }
+main { padding:32px 0 48px; }
+h1 { color:var(--navy); font-size:1.9rem; margin-bottom:12px; line-height:1.25; }
+h2 { color:var(--navy); font-size:1.25rem; margin:28px 0 10px; }
+p, li { margin-bottom:10px; }
+ul, ol { margin:0 0 14px 22px; }
+a { color:var(--accent); }
+.lede { color:var(--muted); font-size:1.05rem; margin-bottom:20px; }
+.card { background:#fff; border-radius:12px; padding:22px; margin:16px 0;
+        box-shadow:0 2px 10px rgba(31,59,87,.08); }
+.btn { display:inline-block; background:var(--accent); color:#fff;
+       padding:10px 18px; border-radius:8px; text-decoration:none;
+       font-weight:600; margin:6px 8px 6px 0; }
+.btn.secondary { background:var(--navy); }
+.note { background:var(--light); border-radius:8px; padding:12px 14px;
+        font-size:0.9rem; margin:16px 0; }
+table { border-collapse:collapse; width:100%; margin:14px 0; background:#fff; }
+th, td { border:1px solid #b7c3d0; padding:8px 10px; text-align:left;
+         font-size:0.95rem; }
+th { background:var(--light); color:var(--navy); }
+footer { border-top:1px solid #ccd6e0; padding:22px 0 40px; margin-top:24px;
+         color:var(--muted); font-size:0.85rem; }
+footer p { margin-bottom:6px; }
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="../index.html">BrightForge Labs</a>
+  <a href="../tools/freelance-rate-calculator.html">Free Rate Calculator</a>
+  <a href="../index.html#guides">Guides</a>
+  <a href="../index.html#products">Templates</a>
+  <a href="../about.html">About</a>
+</div></nav>
+<main><div class="wrap">
+
+<h1>How to track freelance invoices in Excel</h1>
+<p class="lede">Unpaid invoices rarely die of malice. They die of
+forgetfulness &mdash; yours. A tracker's whole job is to make "who owes
+me what, and since when" visible in five seconds.</p>
+
+<h2>The three tables you need</h2>
+<ol>
+  <li><strong>Clients:</strong> name, contact, default payment terms
+      (net-15, net-30). One row per client.</li>
+  <li><strong>Projects:</strong> client, project name, agreed rate or
+      fee, status. One row per engagement.</li>
+  <li><strong>Invoices:</strong> invoice number, client, project, amount,
+      date sent, due date, date paid. One row per invoice. This is the
+      table that earns its keep.</li>
+</ol>
+
+<h2>The formulas that matter</h2>
+<ul>
+  <li><strong>Due date:</strong> <code>=date_sent + terms_days</code> so it
+      is never typed by hand.</li>
+  <li><strong>Overdue flag:</strong> conditional formatting on
+      <code>due_date &lt; TODAY()</code> and <code>date_paid</code> empty.
+      Red rows are the point of the whole system.</li>
+  <li><strong>Outstanding total:</strong>
+      <code>=SUMIFS(amount, date_paid, "")</code> &mdash; the number to
+      glance at every Monday.</li>
+  <li><strong>Income by month/client:</strong> SUMIFS on paid invoices,
+      which quietly becomes your revenue report at tax time.</li>
+</ul>
+
+<h2>The habit that makes it work</h2>
+<p>Update the sheet at the moment you send an invoice &mdash; not at the
+end of the week. A tracker that's 90% current is 0% trustworthy, because
+you'll double-check everything anyway. Ten seconds per invoice keeps it
+at 100%.</p>
+
+<h2>Build it or buy it</h2>
+<p>Everything above is buildable in an afternoon. If you'd rather skip
+the afternoon, our
+<a href="https://thebrightforgelabs.gumroad.com/l/ufdkfn">Freelance Client & Invoice Tracker
+($14)</a> is exactly this system with the
+dashboard already wired: outstanding and overdue totals, income by month
+and client, dropdown-validated entries, and a sample copy so you can see
+it working before you touch the blank one.</p>
+
+<p>And when the tracker flags an invoice red, our
+<a href="late-invoice-payment-reminder-emails.html">payment reminder
+email templates</a> cover what to send next.</p>
+
+</div></main>
+<footer><div class="wrap">
+  <p>BrightForge Labs is an AI-operated business with human ownership and
+     oversight. <a href="../about.html">How that works</a>.</p>
+  <p>Our guides and tools are general productivity resources, not medical,
+     legal, financial, or tax advice.</p>
+  <p><a href="https://thebrightforgelabs.gumroad.com">Store</a> &middot;
+     <a href="../about.html">About &amp; contact</a></p>
+</div></footer>
+</body>
+</html>
