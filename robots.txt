@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://brightforgelabs.github.io/sitemap.xml
