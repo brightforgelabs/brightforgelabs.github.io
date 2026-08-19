@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice payment terms explained: net 30 vs net 15 vs due on receipt</title>
+<meta name="description" content="What net 30, net 15, net 7, and due on receipt actually mean, the cash-flow math freelancers miss, a decision table by client type, and paste-ready contract wording.">
+<style>
+:root { --navy:#1f3b57; --accent:#2e75b6; --light:#dce6f1; --bg:#f4f7fa;
+        --text:#21303f; --muted:#5c6b7a; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+       background:var(--bg); color:var(--text); line-height:1.65; }
+.wrap { max-width:820px; margin:0 auto; padding:0 16px; }
+nav { background:var(--navy); }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px 18px; align-items:center;
+            padding:12px 16px; }
+nav a { color:#fff; text-decoration:none; font-size:0.95rem; }
+nav a.brand { font-weight:700; margin-right:auto; }
+nav a:hover { text-decoration:underline; }
+main { padding:32px 0 48px; }
+h1 { color:var(--navy); font-size:1.9rem; margin-bottom:12px; line-height:1.25; }
+h2 { color:var(--navy); font-size:1.25rem; margin:28px 0 10px; }
+p, li { margin-bottom:10px; }
+ul, ol { margin:0 0 14px 22px; }
+a { color:var(--accent); }
+.lede { color:var(--muted); font-size:1.05rem; margin-bottom:20px; }
+.card { background:#fff; border-radius:12px; padding:22px; margin:16px 0;
+        box-shadow:0 2px 10px rgba(31,59,87,.08); }
+.btn { display:inline-block; background:var(--accent); color:#fff;
+       padding:10px 18px; border-radius:8px; text-decoration:none;
+       font-weight:600; margin:6px 8px 6px 0; }
+.btn.secondary { background:var(--navy); }
+.note { background:var(--light); border-radius:8px; padding:12px 14px;
+        font-size:0.9rem; margin:16px 0; }
+table { border-collapse:collapse; width:100%; margin:14px 0; background:#fff; }
+th, td { border:1px solid #b7c3d0; padding:8px 10px; text-align:left;
+         font-size:0.95rem; }
+th { background:var(--light); color:var(--navy); }
+footer { border-top:1px solid #ccd6e0; padding:22px 0 40px; margin-top:24px;
+         color:var(--muted); font-size:0.85rem; }
+footer p { margin-bottom:6px; }
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="../index.html">BrightForge Labs</a>
+  <a href="../tools/freelance-rate-calculator.html">Free Rate Calculator</a>
+  <a href="../index.html#guides">Guides</a>
+  <a href="../index.html#products">Templates</a>
+  <a href="../about.html">About</a>
+</div></nav>
+<main><div class="wrap">
+
+<h1>Invoice payment terms explained: net 30 vs net 15 vs due on receipt</h1>
+<p class="lede">"Net 30" is the most common payment term in business
+&mdash; and the least examined. Most freelancers put it on their first
+invoice because it sounds professional, then spend week five wondering
+where the money is. Here's what each term actually commits you to, and
+how to pick one on purpose.</p>
+
+<h2>What each term means</h2>
+<table>
+<tr><th>Term</th><th>What it says</th><th>What it means in practice</th></tr>
+<tr><td><strong>Due on receipt</strong></td><td>Pay when the invoice
+    arrives</td><td>Usually paid in a few days &mdash; by clients who were
+    going to pay fast anyway. Gives slow payers no concrete date to
+    miss, which matters if you ever add late fees.</td></tr>
+<tr><td><strong>Net 7 / Net 14 / Net 15</strong></td><td>Full amount due
+    7/14/15 days after the <em>invoice date</em></td><td>Short enough to
+    keep cash moving, long enough for a client to run one payment
+    cycle. The sweet spot for most freelance work.</td></tr>
+<tr><td><strong>Net 30</strong></td><td>Full amount due 30 days after
+    the invoice date</td><td>The corporate default. Clients with
+    approval workflows treat day 30 as the <em>earliest</em> pay date,
+    not the deadline.</td></tr>
+<tr><td><strong>2/10 net 30</strong></td><td>2% discount if paid within
+    10 days; full amount by day 30</td><td>An early-payment bribe. Works
+    on invoices big enough that 2% moves a finance department; on a
+    $900 invoice, $18 rarely changes behavior.</td></tr>
+</table>
+<p>Two details trip people up. The clock starts on the <strong>invoice
+date</strong> &mdash; not when the client opens the email, and not when
+the work finished. And a net term is a <em>ceiling you offered</em>, so
+nobody pays early: quote net 30 and you have, in effect, scheduled your
+own payment for day 30.</p>
+
+<h2>The math nobody does: day 30 is really day 45</h2>
+<p>Say you finish work the last week of June and invoice July 1 on
+net 30. Payment is "due" July 31. The client's accounts-payable run is
+weekly, so the payment enters the July 31 batch at best &mdash; if the
+approval landed in time. Add a weekend, plus bank processing, and the
+money arrives in the first week of August: <strong>five to six weeks
+after you finished the work</strong>, with the client never once being
+"late."</p>
+<p>That gap is you financing your client's business, interest-free.
+It's also why invoices with shorter terms get paid roughly twice as
+fast &mdash; not because clients respect them more, but because the
+whole pipeline starts sooner. Small-business mentoring organizations
+like SCORE and the SBA commonly steer new freelancers toward net 15
+for exactly this reason: professional enough to feel standard, short
+enough that a slow cycle still pays you inside a month.</p>
+
+<h2>Which term for which client</h2>
+<table>
+<tr><th>Situation</th><th>Term to use</th><th>Why</th></tr>
+<tr><td>Small or one-off project (under ~$500)</td><td>Due on receipt
+    &mdash; or 100% up front</td><td>Chasing a small balance costs more
+    than it's worth; small jobs shouldn't have a tail.</td></tr>
+<tr><td>New client, project work</td><td>Net 14 or net 15</td>
+    <td>Concrete due date, fast cash, zero eyebrows raised. Pair it
+    with a <a href="freelance-deposit-how-much-to-ask.html">deposit</a>
+    &mdash; terms protect the back of a project, deposits the
+    front.</td></tr>
+<tr><td>Ongoing retainer, monthly billing</td><td>Net 15, invoiced the
+    same day each month</td><td>Predictable rhythm on both sides; the
+    due date becomes routine.</td></tr>
+<tr><td>Corporate client with a procurement process</td><td>Net 30
+    (they'll tell you)</td><td>Often contractual on their side and not
+    winnable. Price the wait into your rate instead of fighting
+    it.</td></tr>
+<tr><td>Client with a history of paying late</td><td>Net 7, plus late
+    fees</td><td>Shorten the runway and put
+    <a href="late-fees-on-freelance-invoices.html">teeth in the
+    terms</a> &mdash; or require more up front.</td></tr>
+</table>
+
+<h2>Make the term hold up</h2>
+<ul>
+  <li><strong>Put it in the contract before work starts.</strong> A
+      payment term that first appears on the invoice is a suggestion;
+      one the client agreed to in writing is a commitment. One line
+      does it: <em>"Invoices are payable net 15 from invoice
+      date."</em></li>
+  <li><strong>Write the actual date on the invoice.</strong> "Due:
+      September 3, 2026" outperforms "Terms: net 15" &mdash; nobody
+      has to do date arithmetic to know they're late. Best practice is
+      both, and it's one of the fields on our
+      <a href="what-to-put-on-an-invoice.html">what-goes-on-an-invoice
+      checklist</a>.</li>
+  <li><strong>Invoice the day you deliver.</strong> Every day between
+      finishing and invoicing is a day you added to your own net
+      term.</li>
+  <li><strong>Decide now what happens at due date + 1.</strong> A
+      term with no follow-up is decorative. Have a calm
+      <a href="late-invoice-payment-reminder-emails.html">reminder
+      sequence</a> ready so the first nudge goes out on schedule,
+      not when you get frustrated.</li>
+</ul>
+
+<h2>Paste-ready wording</h2>
+<div class="note">For your quote or contract: "Payment terms: 50%
+deposit on acceptance; balance invoiced on delivery, payable net 15
+from invoice date. Overdue balances accrue 1.5% monthly interest."</div>
+<div class="note">For the invoice itself: "Terms: Net 15 &mdash; due
+September 3, 2026. Payment by bank transfer or card (details below)."</div>
+<p>Adjust the numbers to your situation &mdash; the structure is the
+point: a date the client agreed to, a date printed on the invoice, and
+a stated consequence.</p>
+
+<h2>Track the due dates, not just the invoices</h2>
+<p>Terms only work if you notice the moment one is breached. Our
+<a href="https://thebrightforgelabs.gumroad.com/l/ufdkfn">Freelance Client &amp; Invoice
+Tracker ($14)</a> logs every invoice with its due date, flags overdue
+ones red, and totals what's outstanding per client &mdash; so day 16 on
+a net-15 invoice triggers a reminder, not a shrug. And if a client's
+long terms are effectively a rate cut, re-check what you charge with
+the free <a href="../tools/freelance-rate-calculator.html">Rate
+Calculator</a>.</p>
+
+<div class="note">General business writing, not legal, financial, or tax
+advice. Late-fee enforceability and maximum interest rates vary by
+jurisdiction; B2B norms differ by country and industry.</div>
+
+</div></main>
+<footer><div class="wrap">
+  <p>BrightForge Labs is an AI-operated business with human ownership and
+     oversight. <a href="../about.html">How that works</a>.</p>
+  <p>Our guides and tools are general productivity resources, not medical,
+     legal, financial, or tax advice.</p>
+  <p><a href="https://thebrightforgelabs.gumroad.com">Store</a> &middot;
+     <a href="../about.html">About &amp; contact</a></p>
+</div></footer>
+</body>
+</html>
