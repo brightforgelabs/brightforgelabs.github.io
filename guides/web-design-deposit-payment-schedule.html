@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web design deposits & payment schedules: how much, and when</title>
+<meta name="description" content="How much deposit to charge for a website project (25-50%, with the reasoning), the 30/30/30/10 schedule stage by stage, and the clause wording that keeps a build paid as it ships.">
+<style>
+:root { --navy:#1f3b57; --accent:#2e75b6; --light:#dce6f1; --bg:#f4f7fa;
+        --text:#21303f; --muted:#5c6b7a; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+       background:var(--bg); color:var(--text); line-height:1.65; }
+.wrap { max-width:820px; margin:0 auto; padding:0 16px; }
+nav { background:var(--navy); }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px 18px; align-items:center;
+            padding:12px 16px; }
+nav a { color:#fff; text-decoration:none; font-size:0.95rem; }
+nav a.brand { font-weight:700; margin-right:auto; }
+nav a:hover { text-decoration:underline; }
+main { padding:32px 0 48px; }
+h1 { color:var(--navy); font-size:1.9rem; margin-bottom:12px; line-height:1.25; }
+h2 { color:var(--navy); font-size:1.25rem; margin:28px 0 10px; }
+p, li { margin-bottom:10px; }
+ul, ol { margin:0 0 14px 22px; }
+a { color:var(--accent); }
+.lede { color:var(--muted); font-size:1.05rem; margin-bottom:20px; }
+.card { background:#fff; border-radius:12px; padding:22px; margin:16px 0;
+        box-shadow:0 2px 10px rgba(31,59,87,.08); }
+.btn { display:inline-block; background:var(--accent); color:#fff;
+       padding:10px 18px; border-radius:8px; text-decoration:none;
+       font-weight:600; margin:6px 8px 6px 0; }
+.btn.secondary { background:var(--navy); }
+.note { background:var(--light); border-radius:8px; padding:12px 14px;
+        font-size:0.9rem; margin:16px 0; }
+table { border-collapse:collapse; width:100%; margin:14px 0; background:#fff; }
+th, td { border:1px solid #b7c3d0; padding:8px 10px; text-align:left;
+         font-size:0.95rem; }
+th { background:var(--light); color:var(--navy); }
+footer { border-top:1px solid #ccd6e0; padding:22px 0 40px; margin-top:24px;
+         color:var(--muted); font-size:0.85rem; }
+footer p { margin-bottom:6px; }
+</style>
+<script data-goatcounter="https://brightforgelabs.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="../index.html">BrightForge Labs</a>
+  <a href="../tools/freelance-rate-calculator.html">Free Rate Calculator</a>
+  <a href="../tools/deposit-milestone-calculator.html">Deposit Calculator</a>
+  <a href="../index.html#guides">Guides</a>
+  <a href="../index.html#products">Templates</a>
+  <a href="../about.html">About</a>
+</div></nav>
+<main><div class="wrap">
+
+<h1>Web design deposits &amp; payment schedules: how much, and when</h1>
+<p class="lede">Website projects have a payment problem built in: the
+work ships in stages, the client's excitement peaks at the start, and
+the finished site is the one thing you can't repossess. The fix is the
+same as everywhere in freelancing &mdash; a
+<a href="freelance-deposit-how-much-to-ask.html">deposit</a> plus
+<a href="freelance-milestone-payment-schedule.html">milestones</a> &mdash;
+but web work has its own standard shape, and it's worth knowing.</p>
+
+<h2>The short answers</h2>
+<ul>
+  <li><strong>25&ndash;50% up front</strong> is the standard deposit band
+      for web work, same as freelancing generally.</li>
+  <li><strong>Smaller sites (under about $5k): 50%</strong> is the norm
+      &mdash; two or three payments, front-loaded.</li>
+  <li><strong>Bigger builds: 25&ndash;33% down</strong>, with the rest
+      spread across milestones so no single unpaid stretch gets
+      dangerous.</li>
+  <li><strong>Work starts when the deposit clears.</strong> Stated in the
+      quote, this turns a slow deposit into a schedule item instead of an
+      awkward conversation.</li>
+</ul>
+
+<h2>The web-build standard: 30 / 30 / 30 / 10</h2>
+<p>Longer website projects have a schedule shape of their own, because a
+site has natural, client-visible checkpoints that most freelance work
+doesn't. The classic split hangs a payment on each one:</p>
+<table>
+<tr><th>Payment</th><th>Due at</th><th>What it covers</th></tr>
+<tr><td><strong>30%</strong></td><td>Signing</td>
+    <td>Books your calendar and funds discovery, sitemap, and early
+        strategy &mdash; the unglamorous work clients undervalue until
+        they've seen it.</td></tr>
+<tr><td><strong>30%</strong></td><td>Design approval</td>
+    <td>Mockups signed off. This is the project's biggest fork &mdash;
+        collecting here means revisions were paid for before the build
+        starts on top of them.</td></tr>
+<tr><td><strong>30%</strong></td><td>Build on staging</td>
+    <td>A working site the client can click through. The deliverable
+        proves itself; the invoice attached to it is hard to
+        dispute.</td></tr>
+<tr><td><strong>10%</strong></td><td>Launch</td>
+    <td>Go-live, handover, credentials. Small on purpose &mdash; see
+        below.</td></tr>
+</table>
+<p>On a $6,000 site that's $1,800 &middot; $1,800 &middot; $1,800 &middot;
+$600 &mdash; and at no point in the project are you more than $1,800
+deep in unbilled work.</p>
+
+<h2>Why the last payment is small</h2>
+<p>The final invoice is the one that goes bad, because at handover your
+leverage is gone and "can we just tweak one thing first?" season begins.
+The 10% tail is the web-specific version of the
+<a href="freelance-milestone-payment-schedule.html">25% rule</a>: keep
+the amount that's unpaid when the work is functionally done small enough
+that a slow approval is an annoyance, not a cash-flow crisis. A $600
+tail on a $6,000 build keeps launch moving; a $3,000 tail invites a
+six-week "final review."</p>
+
+<h2>Hang payments on approvals, not dates</h2>
+<p>Every payment above is tied to a <em>reviewable deliverable</em> the
+client signs off &mdash; approved mockups, a staging link that works
+&mdash; never to a calendar date or a percent-complete estimate. Web
+projects stall for client-side reasons constantly: content arrives late,
+feedback sits in someone's inbox, the domain login is lost. If payments
+ride on dates, their delay becomes your unpaid limbo. If payments ride
+on approvals, the invoice fires the moment the checkpoint is reached
+&mdash; and the quote should say the next phase starts when it's paid.
+That same logic is why
+<a href="how-to-handle-scope-creep.html">out-of-scope requests</a> get
+their own change orders and their own line items, not a quiet burial in
+the launch payment.</p>
+
+<h2>The clause for your quote</h2>
+<p>State the schedule in the
+<a href="how-to-write-a-freelance-proposal.html">proposal</a>, as how
+you work, not as a request:</p>
+<div class="note">Payment schedule: 30% on signing (work begins when
+paid) &middot; 30% on design approval &middot; 30% when the build is
+live on staging &middot; 10% at launch. Each stage is invoiced with its
+own due date; the next stage begins when the current invoice is paid.
+Invoices unpaid 10 days past the due date accrue a late fee of 1.5% per
+month.</div>
+<p>Our free
+<a href="../tools/deposit-milestone-calculator.html">Deposit &amp;
+Milestone Payment Calculator</a> generates this block from your own
+numbers: enter the project total, pick 30/30/30/10 (or 50/50 for a
+small site), and it computes every payment in dollars, shows the most
+unpaid work you'd ever be floating, and writes the clause with your
+<a href="late-fees-on-freelance-invoices.html">late-fee terms</a>
+included &mdash; ready to paste. It runs in your browser and works
+offline.</p>
+
+<h2>Keeping a build paid as it ships</h2>
+<p>A four-payment schedule means four invoices per project, each with
+its own <a href="invoice-payment-terms-net-30-explained.html">payment
+terms</a> and due date, each a normal invoice that should pass the
+<a href="what-to-put-on-an-invoice.html">invoice checklist</a>. Our
+<a href="https://thebrightforgelabs.gumroad.com/l/ufdkfn">Freelance Client & Invoice Tracker
+($14)</a> tracks every milestone invoice
+with overdue flags and per-client outstanding totals, and the
+<a href="https://thebrightforgelabs.gumroad.com/l/yjtnav">Invoice Template Pack +
+Payment-Reminder Emails ($9)</a> has a
+deposit invoice format and the
+<a href="late-invoice-payment-reminder-emails.html">reminder emails</a>
+for when a milestone payment slips.</p>
+
+<div class="note">General business writing, not legal, financial, or
+tax advice. Deposit norms and contract enforceability vary by field and
+jurisdiction.</div>
+
+</div></main>
+<footer><div class="wrap">
+  <p>BrightForge Labs is an AI-operated business with human ownership and
+     oversight. <a href="../about.html">How that works</a>.</p>
+  <p>Our guides and tools are general productivity resources, not medical,
+     legal, financial, or tax advice.</p>
+  <p><a href="https://thebrightforgelabs.gumroad.com">Store</a> &middot;
+     <a href="../about.html">About &amp; contact</a></p>
+</div></footer>
+</body>
+</html>
