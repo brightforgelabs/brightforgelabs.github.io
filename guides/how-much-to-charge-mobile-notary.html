@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile notary fees: what to charge for travel and loan signings (the math)</title>
+<meta name="description" content="How to price mobile notary work &mdash; the two-part fee structure, a cost-floor formula for travel fees, a tiered radius table, and the effective-hourly math on loan signings, with worked examples.">
+<style>
+:root { --navy:#1f3b57; --accent:#2e75b6; --light:#dce6f1; --bg:#f4f7fa;
+        --text:#21303f; --muted:#5c6b7a; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+       background:var(--bg); color:var(--text); line-height:1.65; }
+.wrap { max-width:820px; margin:0 auto; padding:0 16px; }
+nav { background:var(--navy); }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px 18px; align-items:center;
+            padding:12px 16px; }
+nav a { color:#fff; text-decoration:none; font-size:0.95rem; }
+nav a.brand { font-weight:700; margin-right:auto; }
+nav a:hover { text-decoration:underline; }
+main { padding:32px 0 48px; }
+h1 { color:var(--navy); font-size:1.9rem; margin-bottom:12px; line-height:1.25; }
+h2 { color:var(--navy); font-size:1.25rem; margin:28px 0 10px; }
+p, li { margin-bottom:10px; }
+ul, ol { margin:0 0 14px 22px; }
+a { color:var(--accent); }
+.lede { color:var(--muted); font-size:1.05rem; margin-bottom:20px; }
+.card { background:#fff; border-radius:12px; padding:22px; margin:16px 0;
+        box-shadow:0 2px 10px rgba(31,59,87,.08); }
+.btn { display:inline-block; background:var(--accent); color:#fff;
+       padding:10px 18px; border-radius:8px; text-decoration:none;
+       font-weight:600; margin:6px 8px 6px 0; }
+.btn.secondary { background:var(--navy); }
+.note { background:var(--light); border-radius:8px; padding:12px 14px;
+        font-size:0.9rem; margin:16px 0; }
+table { border-collapse:collapse; width:100%; margin:14px 0; background:#fff; }
+th, td { border:1px solid #b7c3d0; padding:8px 10px; text-align:left;
+         font-size:0.95rem; }
+th { background:var(--light); color:var(--navy); }
+footer { border-top:1px solid #ccd6e0; padding:22px 0 40px; margin-top:24px;
+         color:var(--muted); font-size:0.85rem; }
+footer p { margin-bottom:6px; }
+</style>
+<script data-goatcounter="https://brightforgelabs.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="../index.html">BrightForge Labs</a>
+  <a href="../tools/freelance-rate-calculator.html">Free Rate Calculator</a>
+  <a href="../tools/deposit-milestone-calculator.html">Deposit Calculator</a>
+  <a href="../index.html#guides">Guides</a>
+  <a href="../index.html#products">Templates</a>
+  <a href="../about.html">About</a>
+</div></nav>
+<main><div class="wrap">
+
+<h1>Mobile notary fees: what to charge for travel and loan signings
+(the math)</h1>
+<p class="lede">Mobile notary pricing confuses people because it's
+really <strong>two prices stapled together</strong>: a notarization fee
+that state law caps, and a travel/convenience fee that is ordinary
+business pricing. The first number you look up. The second number is
+where mobile notaries underprice themselves &mdash; usually because
+they never put their real costs into a formula. This guide is the
+formula.</p>
+
+<h2>The two-part fee structure</h2>
+<p><strong>Part 1 &mdash; the notarial act fee.</strong> Set by your
+state, typically $5&ndash;$15 per notarized signature, and it is a
+<em>cap</em>, not a suggestion &mdash; you can charge less, never more.
+Look yours up in your state's notary handbook (Secretary of State
+website) before quoting anything.</p>
+<p><strong>Part 2 &mdash; the travel fee.</strong> In most states this
+is separate from the capped act fee and priced by you; a few states cap
+or regulate it too (some set per-mile rates), and many require you to
+disclose it in advance and itemize it separately from the act fee. Two
+rules that keep you safe everywhere: <strong>quote the full total
+before the appointment, and show the act fee and travel fee as separate
+lines</strong>.</p>
+
+<h2>The travel-fee floor: a formula, not a feeling</h2>
+<p>Your travel fee has a floor below which the appointment loses money.
+Price the trip, not the stamp:</p>
+<p><strong>Floor = (round-trip miles &times; vehicle cost/mile) +
+(door-to-door hours &times; your target hourly rate)</strong></p>
+<p>Worked example &mdash; an appointment 12 miles away:</p>
+<table>
+<tr><th>Cost</th><th>Math</th><th>Amount</th></tr>
+<tr><td>Vehicle</td><td>24 mi round trip &times; $0.70/mi</td>
+<td>$16.80</td></tr>
+<tr><td>Your time</td><td>1.25 h door-to-door &times; $40/h target</td>
+<td>$50.00</td></tr>
+<tr><td><strong>Travel floor</strong></td><td></td>
+<td><strong>~$67</strong></td></tr>
+</table>
+<p>Add two notarized signatures at a $10 state cap and the honest quote
+is about <strong>$87</strong>. Notice what the math just told you: the
+commonly quoted $25 travel fee only works for appointments a few
+minutes away. Most local mobile appointments genuinely cost the
+customer $50&ndash;$100 all-in &mdash; your quote landing there isn't
+gouging, it's arithmetic.</p>
+
+<h2>A tiered travel table (so you stop re-deriving it)</h2>
+<p>Run the formula once for your own numbers, then publish bands:</p>
+<table>
+<tr><th>Distance from base</th><th>Travel fee</th></tr>
+<tr><td>0&ndash;10 miles</td><td>$30</td></tr>
+<tr><td>11&ndash;20 miles</td><td>$45</td></tr>
+<tr><td>21&ndash;30 miles</td><td>$60</td></tr>
+<tr><td>Beyond 30 miles</td><td>$60 + $1.50/mile past 30</td></tr>
+<tr><td>Evenings/weekends/urgent</td><td>+$25&ndash;$50 premium</td></tr>
+</table>
+<p>Bands beat exact-mile quotes for the same reason flat project
+pricing beats hourly estimates: the customer gets a fast, confident
+number and you stop negotiating pennies. If your state regulates travel
+fees, your bands live under that ceiling.</p>
+
+<h2>Loan signings: run the effective-hourly math before you celebrate</h2>
+<p>Loan signing packages pay a flat $75&ndash;$200 (signing services
+cluster at $90&ndash;$125; direct escrow work runs ~$150+). The flat
+fee looks great against a one-hour appointment &mdash; but the
+appointment is not the job:</p>
+<table>
+<tr><th>Where the time goes</th><th>Hours</th></tr>
+<tr><td>Print two document sets (~300 pages), prep</td><td>0.50</td></tr>
+<tr><td>Drive, both ways</td><td>0.67</td></tr>
+<tr><td>The signing itself</td><td>1.00</td></tr>
+<tr><td>Scan-backs, drop-off, status updates</td><td>0.58</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2.75</strong></td></tr>
+</table>
+<p>A $125 signing &divide; 2.75 hours = <strong>~$45/hour
+effective</strong>, before paper, toner, E&amp;O insurance, and the
+annual background screening. That's still decent money &mdash; but
+it's the real number to compare offers with, and it's why a $90
+signing 40 minutes away can be worth declining. The same
+actual-hours-in-the-denominator logic applies to any freelance work
+&mdash; the <a href="effective-hourly-rate-freelance.html">effective
+hourly rate guide</a> walks through it client by client.</p>
+
+<h2>Getting paid without chasing</h2>
+<p>General notary work is pay-at-the-door. Signing services and escrow
+clients pay on invoice &mdash; commonly 30&ndash;45 days later &mdash;
+so the moment you take signing-service work you have receivables:
+number every invoice, put a real due date on it, and chase on a
+schedule (the <a href="late-invoice-payment-reminder-emails.html">
+payment-reminder templates</a> transfer directly). A simple
+tracker with one row per signing &mdash; who, date, fee, invoiced,
+paid &mdash; is enough; our
+<a href="https://thebrightforgelabs.gumroad.com/l/ufdkfn">Freelance Client & Invoice Tracker
+($14)</a> does exactly that in Excel, and
+the <a href="../tools/freelance-rate-calculator.html">free rate
+calculator</a> will gross up your income goal for taxes and
+non-billable hours to give you the target hourly rate the travel
+formula needs.</p>
+
+<div class="note">Business-pricing math only &mdash; not legal advice.
+Notarial act fees are capped by state law, travel-fee rules vary by
+state, and you are responsible for following your state's notary
+statutes and handbook. Verify your caps with your Secretary of State
+before setting prices.</div>
+
+</div></main>
+<footer><div class="wrap">
+  <p>BrightForge Labs is an AI-operated business with human ownership and
+     oversight. <a href="../about.html">How that works</a>.</p>
+  <p>Our guides and tools are general productivity resources, not medical,
+     legal, financial, or tax advice.</p>
+  <p><a href="https://thebrightforgelabs.gumroad.com">Store</a> &middot;
+     <a href="../about.html">About &amp; contact</a></p>
+</div></footer>
+</body>
+</html>
